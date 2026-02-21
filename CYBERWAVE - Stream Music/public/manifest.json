@@ -1,0 +1,44 @@
+{
+  "name": "CYBERWAVE - Stream Music",
+  "short_name": "CYBERWAVE",
+  "description": "A Cyberpunk 2077-themed music and video streaming app with offline support",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0d14",
+  "theme_color": "#00ffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://019c7e1f-3332-754b-ba7b-b6b1005e13a3.mochausercontent.com/icons-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://019c7e1f-3332-754b-ba7b-b6b1005e13a3.mochausercontent.com/icons-icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://019c7e1f-3332-754b-ba7b-b6b1005e13a3.mochausercontent.com/icons-icon-512.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["music", "entertainment"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Library",
+      "url": "/?view=library",
+      "description": "Open your music library"
+    },
+    {
+      "name": "Downloads",
+      "url": "/?view=downloads",
+      "description": "View downloaded content"
+    }
+  ]
+}

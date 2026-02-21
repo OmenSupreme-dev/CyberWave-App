@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cyberpunk 2077 Theme - Dark by default */
+    --background: 220 20% 4%;
+    --foreground: 180 100% 90%;
+    --card: 220 25% 8%;
+    --card-foreground: 180 100% 90%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 180 100% 90%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 220 20% 4%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 180 30% 60%;
+    --accent: 50 100% 50%;
+    --accent-foreground: 220 20% 4%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 180 100% 50% / 20%;
+    --input: 180 100% 50% / 15%;
+    --ring: 180 100% 50%;
+    --radius: 0.25rem;
+    --chart-1: 180 100% 50%;
+    --chart-2: 320 100% 50%;
+    --chart-3: 50 100% 50%;
+    --chart-4: 280 100% 60%;
+    --chart-5: 140 100% 50%;
+    --sidebar: 220 25% 6%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 180 100% 50% / 15%;
+    --sidebar-ring: 180 100% 50%;
+    
+    /* Cyberpunk specific */
+    --neon-cyan: 180 100% 50%;
+    --neon-magenta: 320 100% 50%;
+    --neon-yellow: 50 100% 50%;
+    --neon-red: 0 100% 50%;
+    --neon-purple: 280 100% 60%;
+    --neon-green: 140 100% 50%;
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.5);
+    --glow-magenta: 0 0 20px hsl(320 100% 50% / 0.5);
+    --glow-yellow: 0 0 20px hsl(50 100% 50% / 0.5);
+  }
+
+  .dark {
+    --background: 220 20% 4%;
+    --foreground: 180 100% 90%;
+    --card: 220 25% 8%;
+    --card-foreground: 180 100% 90%;
+    --popover: 220 25% 10%;
+    --popover-foreground: 180 100% 90%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 4%;
+    --secondary: 320 100% 50%;
+    --secondary-foreground: 220 20% 4%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 180 30% 60%;
+    --accent: 50 100% 50%;
+    --accent-foreground: 220 20% 4%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 180 100% 50% / 20%;
+    --input: 180 100% 50% / 15%;
+    --ring: 180 100% 50%;
+    --chart-1: 180 100% 50%;
+    --chart-2: 320 100% 50%;
+    --chart-3: 50 100% 50%;
+    --chart-4: 280 100% 60%;
+    --chart-5: 140 100% 50%;
+    --sidebar: 220 25% 6%;
+    --sidebar-foreground: 180 100% 90%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 220 20% 4%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 180 100% 90%;
+    --sidebar-border: 180 100% 50% / 15%;
+    --sidebar-ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Orbitron", "Rajdhani", "Inter Variable", system-ui, sans-serif;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .neon-text-cyan {
+    color: hsl(180 100% 50%);
+    text-shadow: 0 0 10px hsl(180 100% 50% / 0.8), 0 0 20px hsl(180 100% 50% / 0.6), 0 0 30px hsl(180 100% 50% / 0.4);
+  }
+  
+  .neon-text-magenta {
+    color: hsl(320 100% 50%);
+    text-shadow: 0 0 10px hsl(320 100% 50% / 0.8), 0 0 20px hsl(320 100% 50% / 0.6), 0 0 30px hsl(320 100% 50% / 0.4);
+  }
+  
+  .neon-text-yellow {
+    color: hsl(50 100% 50%);
+    text-shadow: 0 0 10px hsl(50 100% 50% / 0.8), 0 0 20px hsl(50 100% 50% / 0.6), 0 0 30px hsl(50 100% 50% / 0.4);
+  }
+  
+  .neon-border-cyan {
+    border-color: hsl(180 100% 50%);
+    box-shadow: 0 0 10px hsl(180 100% 50% / 0.5), inset 0 0 10px hsl(180 100% 50% / 0.1);
+  }
+  
+  .neon-border-magenta {
+    border-color: hsl(320 100% 50%);
+    box-shadow: 0 0 10px hsl(320 100% 50% / 0.5), inset 0 0 10px hsl(320 100% 50% / 0.1);
+  }
+  
+  .cyber-grid {
+    background-image: 
+      linear-gradient(hsl(180 100% 50% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(180 100% 50% / 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .glitch {
+    animation: glitch 2s infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 90%, 100% { transform: translate(0); }
+    92% { transform: translate(-2px, 2px); }
+    94% { transform: translate(2px, -2px); }
+    96% { transform: translate(-2px, -2px); }
+    98% { transform: translate(2px, 2px); }
+  }
+  
+  .scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      hsl(180 100% 50% / 0.03) 2px,
+      hsl(180 100% 50% / 0.03) 4px
+    );
+    pointer-events: none;
+  }
+}
